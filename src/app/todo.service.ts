@@ -36,4 +36,8 @@ export class TodoService {
     this.deleteTodo(newState.id);
     this.todos$.next([...this.todos$.getValue(), newState]);
   }
+
+  getLength() {
+    return this.todos$.getValue().length;
+  }
 }
